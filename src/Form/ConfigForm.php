@@ -250,6 +250,15 @@ class ConfigForm extends Form implements TranslatorAwareInterface
                 'min' => '1',
             ],
         ]);
+
+        $this->add([
+            'name' => 'oaipmhrepository_french_national_library_dc',
+            'type' => Element\Checkbox::class,
+            'options' => [
+                'label' => 'DC to be ingested by French national library', // @translate
+                'info' => $this->translate('The French national library excepts the content of some fields to be formatted according to their needs.'), // @translate
+            ],
+        ]);
     }
 
     protected function translate($args)

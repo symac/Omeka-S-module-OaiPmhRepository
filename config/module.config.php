@@ -117,6 +117,7 @@ return [
             'oaipmhrepository_redirect_route' => '',
             'oaipmhrepository_list_limit' => 50,
             'oaipmhrepository_token_expiration_time' => 10,
+            'oaipmhrepository_french_national_library_dc' => false,
         ],
         'xml' => [
             'identify' => [
