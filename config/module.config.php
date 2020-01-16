@@ -86,6 +86,7 @@ return [
                 'mods' => Service\OaiPmh\Metadata\ModsFactory::class,
                 'oai_dc' => Service\OaiPmh\Metadata\OaiDcFactory::class,
                 'oai_dcterms' => Service\OaiPmh\Metadata\OaiDctermsFactory::class,
+                'oai_dcterms_navigae' => Service\OaiPmh\Metadata\OaiDctermsNavigaeFactory::class,
             ],
         ],
         'oai_set_formats' => [
@@ -102,6 +103,7 @@ return [
                 'mets',
                 'mods',
                 'oai_dcterms',
+                'oai_dcterms_navigae',
             ],
             'oaipmhrepository_expose_media' => true,
             'oaipmhrepository_hide_empty_sets' => true,
