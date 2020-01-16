@@ -101,15 +101,17 @@ class OaiDctermsNavigae extends AbstractMetadata
             switch ($localName)
             {
                 case 'date':
-                    $date = $values[0];
-                    $date = preg_replace("(\?|\]|\[)", "", $date);
-                    $date = preg_replace("/ca/", "", $date);
-                    $date = trim($date);
-                    if (!preg_match("/^\d{4}$/", $date)) {
-                        $date = "";
-                    }
-                    if ($date != '') {
-                        $this->appendNewElement($oai, 'dcterms:created', $date);
+                    if (sizeof($values) == 1) {
+                        $date = $values[0];
+                        $date = preg_replace("(\?|\]|\[)", "", $date);
+                        $date = preg_replace("/ca/", "", $date);
+                        $date = trim($date);
+                        if (!preg_match("/^\d{4}$/", $date)) {
+                            $date = "";
+                        }
+                        if ($date != '') {
+                            $this->appendNewElement($oai, 'dcterms:created', $date);
+                        }
                     }
                     $values = null;
                     break;
